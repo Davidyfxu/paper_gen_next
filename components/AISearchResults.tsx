@@ -10,11 +10,11 @@ const AISearchResults = () => {
     <div>
       {links.map((link, idx) => {
         return (
-          <div key={idx} className={"flex items-center gap-2 my-1"}>
+          <div key={idx} className={"flex items-center gap-4 my-2"}>
             <CiLink />
             <span
               className={
-                "bg-gray-100 flex-1 p-1 text-xs text-zinc-950 rounded-lg"
+                "min-h-6 bg-gray-100 flex-1 p-3 text-xs text-zinc-950 rounded-lg"
               }
             >
               {link}
