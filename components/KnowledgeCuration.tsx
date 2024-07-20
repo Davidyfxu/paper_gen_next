@@ -8,7 +8,7 @@ import {
   UserInputLink,
 } from "@/components";
 import { CiSearch } from "react-icons/ci";
-
+import {get} from 'lodash-es'
 enum ChoiceEnum {
   AIResults = "1",
   UserInput = "2",
@@ -54,7 +54,7 @@ const KnowledgeCuration = () => {
       <div
         className="join w-full my-4"
         onClick={(e) => {
-          setTab(e.target?.value || null);
+          setTab(get(e,"target.value", null))
         }}
       >
         {OPTIONS.map((o, index) => (
