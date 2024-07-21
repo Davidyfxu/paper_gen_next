@@ -10,7 +10,7 @@ const SubModuleHeader = (props: ISubModuleHeader) => {
   return (
     <div className={"flex justify-between items-center"}>
       {title}
-      <button className="btn btn-outline btn-warning ">
+      <button className="btn btn-outline btn-warning">
         {icon}
         {buttonText}
       </button>

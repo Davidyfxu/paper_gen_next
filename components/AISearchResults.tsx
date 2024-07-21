@@ -7,7 +7,7 @@ const AISearchResults = () => {
     "https://www.digitalriver.com/blog/consumer-behavior-trends-2024/",
   );
   return (
-    <div>
+    <div className={"overflow-auto"}>
       {links.map((link, idx) => {
         return (
           <div key={idx} className={"flex items-center gap-4 my-2"}>

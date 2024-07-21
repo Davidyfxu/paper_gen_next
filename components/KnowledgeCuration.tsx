@@ -8,7 +8,7 @@ import {
   UserInputLink,
 } from "@/components";
 import { CiSearch } from "react-icons/ci";
-import {get} from 'lodash-es'
+import { get } from "lodash-es";
 enum ChoiceEnum {
   AIResults = "1",
   UserInput = "2",
@@ -42,19 +42,19 @@ const KnowledgeCuration = () => {
         buttonText={"Search"}
       />
       <div className="form-control">
-        <label className="label cursor-pointer">
-          <span className="label-text">Research Papers Only</span>
+        <label className="label cursor-pointer justify-end gap-1">
           <input
             type="checkbox"
             defaultChecked
             className="checkbox checkbox-primary"
           />
+          <span className="label-text">Research Papers Only</span>
         </label>
       </div>
       <div
         className="join w-full my-4"
         onClick={(e) => {
-          setTab(get(e,"target.value", null))
+          setTab(get(e, "target.value", null));
         }}
       >
         {OPTIONS.map((o, index) => (

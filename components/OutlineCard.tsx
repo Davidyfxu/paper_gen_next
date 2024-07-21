@@ -2,7 +2,7 @@ import React from "react";
 
 const OutlineCard = () => {
   return (
-    <div>
+    <div className={"overflow-auto"}>
       {Array(10)
         .fill(1)
         .map(() => (
