@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { SubModuleHeader, OutlineText, OutlineCard } from "@/components/index";
 import { MdGeneratingTokens } from "react-icons/md";
+import { Segmented } from "antd";
+import { AppstoreOutlined, BarsOutlined } from "@ant-design/icons";
 
 enum OutlineEnum {
   Card = "1",
@@ -26,27 +28,23 @@ const Outline = () => {
         buttonText={"Generate"}
       />
       <div className="divider" />
-      <div className={"flex justify-end gap-2 items-center mb-4"}>
-        <span className={"flex gap-1 items-center"}>
-          <input
-            type="radio"
-            name="radio-1"
-            className="radio"
-            checked={tab === OutlineEnum.Card}
-            onChange={() => setTab(OutlineEnum.Card)}
-          />
-          Card
-        </span>
-        <span className={"flex gap-1 items-center"}>
-          <input
-            type="radio"
-            name="radio-1"
-            className="radio"
-            checked={tab === OutlineEnum.Text}
-            onChange={() => setTab(OutlineEnum.Text)}
-          />
-          Text
-        </span>
+      <div className={"flex justify-end mb-4"}>
+        <Segmented
+          size={"large"}
+          onChange={(v) => setTab(v)}
+          options={[
+            {
+              label: "Card",
+              icon: <BarsOutlined />,
+              value: OutlineEnum.Card,
+            },
+            {
+              label: "Text",
+              icon: <AppstoreOutlined />,
+              value: OutlineEnum.Text,
+            },
+          ]}
+        />
       </div>
       {renderTabContent()}
     </div>

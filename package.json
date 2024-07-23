@@ -16,7 +16,9 @@
     "next": "14.2.5",
     "react-hot-toast": "^2.4.1",
     "lodash-es": "^4.17.21",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "antd": "^5.19.3",
+    "@ant-design/icons": "^5.4.0"
   },
   "devDependencies": {
     "typescript": "^5",

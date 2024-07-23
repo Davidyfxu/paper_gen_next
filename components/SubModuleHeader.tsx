@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "antd";
 
 interface ISubModuleHeader {
   title: string;
@@ -9,11 +10,14 @@ const SubModuleHeader = (props: ISubModuleHeader) => {
   const { title, icon, buttonText } = props;
   return (
     <div className={"flex justify-between items-center"}>
-      {title}
-      <button className="btn btn-outline btn-warning">
-        {icon}
+      <span className={"text-gray-700 font-semibold text-base"}>{title}</span>
+      <Button
+        className={"w-[150px] h-[44px] bg-yellow-200 rounded-lg text-gray-800"}
+        icon={icon}
+        type="primary"
+      >
         {buttonText}
-      </button>
+      </Button>
     </div>
   );
 };

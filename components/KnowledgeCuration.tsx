@@ -9,6 +9,7 @@ import {
 } from "@/components";
 import { CiSearch } from "react-icons/ci";
 import { get } from "lodash-es";
+import { Radio } from "antd";
 enum ChoiceEnum {
   AIResults = "1",
   UserInput = "2",
@@ -58,14 +59,14 @@ const KnowledgeCuration = () => {
         }}
       >
         {OPTIONS.map((o, index) => (
-          <input
+          <div
             key={index}
-            className="join-item btn flex-1"
-            type="radio"
-            name="options"
+            className="btn flex-1"
             aria-label={o.label}
             value={o.value}
-          />
+          >
+            {o.label}
+          </div>
         ))}
       </div>
       {renderTabContent()}
