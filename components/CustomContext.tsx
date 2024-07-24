@@ -40,7 +40,7 @@ const CustomContext = () => {
           onClick={toggleCollapse}
           shape="circle"
           type="text"
-          icon={isCollapsed ? <CaretUpOutlined /> : <CaretDownOutlined />}
+          icon={isCollapsed ? <CaretDownOutlined /> : <CaretUpOutlined />}
         />
       </div>
     </div>
