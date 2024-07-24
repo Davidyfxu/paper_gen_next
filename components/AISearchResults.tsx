@@ -1,6 +1,17 @@
+import {
+  CaretRightOutlined,
+  DeleteOutlined,
+  LinkOutlined,
+} from "@ant-design/icons";
+import { Button, Collapse } from "antd";
 import React from "react";
-import { CiLink } from "react-icons/ci";
-import { MdDelete } from "react-icons/md";
+import PurpleButton from "@/components/PurpleButton";
+
+const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
 
 const AISearchResults = () => {
   const links = Array(10).fill(
@@ -11,15 +22,33 @@ const AISearchResults = () => {
       {links.map((link, idx) => {
         return (
           <div key={idx} className={"flex items-center gap-4 my-2"}>
-            <CiLink />
-            <span
-              className={
-                "min-h-6 bg-gray-100 flex-1 p-3 text-xs text-zinc-950 rounded-lg"
-              }
-            >
-              {link}
-            </span>
-            <MdDelete />
+            <Button
+              type="text"
+              shape="circle"
+              icon={<LinkOutlined className={"text-violet-500"} />}
+              size={"small"}
+            />
+            <Collapse
+              className="flex-1"
+              bordered={false}
+              expandIconPosition={"end"}
+              expandIcon={({ isActive }) => (
+                <CaretRightOutlined rotate={isActive ? 90 : 0} />
+              )}
+              items={[
+                {
+                  key: "1",
+                  label: link,
+                  children: <p>{text}</p>,
+                },
+              ]}
+            />
+            <PurpleButton
+              type="primary"
+              shape="circle"
+              icon={<DeleteOutlined className={"text-violet-500"} />}
+              size={"small"}
+            />
           </div>
         );
       })}

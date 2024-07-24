@@ -9,28 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.4.0",
     "@clerk/nextjs": "^4.26.1",
+    "antd": "^5.19.3",
     "axios": "^1.6.2",
+    "lodash-es": "^4.17.21",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5",
     "react-hot-toast": "^2.4.1",
-    "lodash-es": "^4.17.21",
-    "react-icons": "^4.11.0",
-    "antd": "^5.19.3",
-    "@ant-design/icons": "^5.4.0"
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/lodash-es": "^4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
     "autoprefixer": "^10.0.1",
-    "tailwindcss": "^3.4.1",
-    "@tailwindcss/typography": "^0.5.10",
     "daisyui": "^4.12.10",
+    "postcss": "^8",
     "prettier": "^3.3.3",
-    "@types/lodash-es": "^4"
+    "sass": "^1.77.8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

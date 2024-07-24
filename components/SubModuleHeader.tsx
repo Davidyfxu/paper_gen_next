@@ -12,7 +12,8 @@ const SubModuleHeader = (props: ISubModuleHeader) => {
     <div className={"flex justify-between items-center"}>
       <span className={"text-gray-700 font-semibold text-base"}>{title}</span>
       <Button
-        className={"w-[150px] h-[44px] bg-yellow-200 rounded-lg text-gray-800"}
+        className={"w-[150px] h-[44px] rounded-lg text-gray-800"}
+        style={{ backgroundColor: "#EFF87B" }}
         icon={icon}
         type="primary"
       >

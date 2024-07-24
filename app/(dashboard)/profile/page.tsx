@@ -1,8 +1,9 @@
 import React from "react";
-import { UserProfile } from "@clerk/nextjs";
+// import { UserProfile } from "@clerk/nextjs";
 
 const ProfilePage = async () => {
-  return <UserProfile />;
+  return <div>123</div>;
+  // return <UserProfile />;
 };
 
 export default ProfilePage;

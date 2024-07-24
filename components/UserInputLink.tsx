@@ -1,7 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { BiArrowFromBottom, BiArrowFromTop } from "react-icons/bi";
 import AISearchResults from "@/components/AISearchResults";
+import { Button, Divider, Input, Space } from "antd";
+import {
+  CaretDownOutlined,
+  CaretUpOutlined,
+  LinkOutlined,
+} from "@ant-design/icons";
+import PurpleButton from "@/components/PurpleButton";
 
 const UserInputLink = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -16,33 +22,40 @@ const UserInputLink = () => {
           isCollapsed ? "max-h-0 overflow-hidden" : "max-h-screen"
         }`}
       >
-        <div className={"flex flex-col"}>
-          <span>Enter Link to Search</span>
-          <div className={"flex justify-between gap-2 items-center mt-2"}>
-            <input
-              type="text"
-              placeholder="Paste your URL here"
-              className="input input-bordered flex-1"
-            />
-            <button className="btn btn-outline">Submit</button>
-          </div>
+        <div className={"flex flex-col gap-3"}>
+          <Space>
+            <LinkOutlined className={"w-4 h-4"} />
+            <span className={"text-gray-700 font-medium text-xs leading-6"}>
+              Enter Link to Search
+            </span>
+          </Space>
+          <Input
+            placeholder="Paste your URL here"
+            suffix={<PurpleButton>Submit</PurpleButton>}
+          />
         </div>
-        <div className={"flex flex-col"}>
-          <span>Enter Keyword to Search</span>
-          <div className={"flex justify-between gap-2 items-center mt-2"}>
-            <input
-              type="text"
-              placeholder="Enter a keyword you want PaperGen to search"
-              className="input input-bordered flex-1"
-            />
-            <button className="btn btn-outline">Submit</button>
-          </div>
+        <div className={"flex flex-col gap-3"}>
+          <Space>
+            <LinkOutlined className={"w-4 h-4"} />
+            <span className={"text-gray-700 font-medium text-xs leading-6"}>
+              Enter Keyword to Search
+            </span>
+          </Space>
+          <Input
+            placeholder="Enter a keyword you want PaperGen to search"
+            suffix={<PurpleButton>Submit</PurpleButton>}
+          />
         </div>
       </div>
-      <button onClick={toggleCollapse} className="btn btn-block">
-        {isCollapsed ? <BiArrowFromTop /> : <BiArrowFromBottom />}
-      </button>
-      <div className="divider"></div>
+      <div className="flex justify-center mt-[-16px]">
+        <Button
+          onClick={toggleCollapse}
+          shape="circle"
+          type="text"
+          icon={isCollapsed ? <CaretUpOutlined /> : <CaretDownOutlined />}
+        />
+      </div>
+      <Divider />
       <AISearchResults />
     </div>
   );
